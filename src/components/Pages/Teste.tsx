@@ -52,8 +52,8 @@ class SiderDemo extends React.Component {
          
         <HStack width='100%' border={4} borderRadius={4} padding='0.8%' bgColor='white'>
         <Text background='transparent' fontSize={20}>Dashboard Financeiro</Text>
-        <HStack width='100%' paddingLeft={'70%'}>
-        <Input borderRadius={5} minW='160px' maxW='260px' textAlign={'center'}  placeholder="Todas as contas"></Input>
+        <HStack minW='60%' maxW='90%' justifyContent='right'>
+        <Input borderRadius={5} minW='160px' maxW='270px'  textAlign={'center'}  placeholder="Todas as contas"></Input>
         </HStack>
           
         
