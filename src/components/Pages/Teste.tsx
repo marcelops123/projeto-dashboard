@@ -50,8 +50,8 @@ class SiderDemo extends React.Component {
         </Sider>
         <Layout className="site-layout">
          
-        <HStack width='100%' border={4} borderRadius={4} padding='0.8%' bgColor='white'>
-        <Text background='transparent' fontSize={20}>Dashboard Financeiro</Text>
+        <HStack width='100%' border={4} height='10%' borderRadius={4} padding='0.8%' bgColor='white'>
+        <Text background='transparent'  fontSize={20}><b>Dashboard Financeiro</b></Text>
         <HStack minW='60%' maxW='90%' justifyContent='right'>
         <Input borderRadius={5} minW='160px' maxW='270px'  textAlign={'center'}  placeholder="Todas as contas"></Input>
         </HStack>
@@ -60,12 +60,29 @@ class SiderDemo extends React.Component {
           </HStack>
            
           <Content style={{ margin: '0 16px' }}>
-            <Breadcrumb style={{ margin: '16px  10' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb>
+        
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                <h1>Segunda página</h1>
+                <Box  padding={5} backgroundColor='white'>
+                  <HStack>
+                    <Text textColor={'dodgerblue'} fontSize={20} paddingBottom='2%'>R$</Text>
+
+                    <VStack><br/><br/><br/>
+                    <Text textColor={'dodgerblue'} fontSize={'40'}>2.619.904,37</Text>
+                    <Text textAlign={'center'} textColor={'dodgerblue'} >Saldo Atual</Text>
+                    </VStack>
+                    
+                  <HStack paddingLeft={5}>
+                    <Text textColor={'dodgerblue'} fontSize={20} paddingBottom='10%'>R$</Text>
+
+                    <VStack><br/><br/><br/>
+                    <Text textColor={'dodgerblue'} fontSize={'40'}>583,34</Text>
+                    <Text textAlign={'center'} textColor={'dodgerblue'} >A receber</Text>
+
+                    </VStack>
+                  </HStack>
+
+                  </HStack>
+                </Box>
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>Success Sistemas LTDA.</Footer>

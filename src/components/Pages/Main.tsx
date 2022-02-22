@@ -11,6 +11,7 @@ UserOutlined,
 } from '@ant-design/icons';
 import { Teste } from "./Teste";
 import { useNavigate } from "react-router-dom";
+import { ComponentContext } from "../ComponentContext";
 
 
 
@@ -56,7 +57,7 @@ class SiderDemo extends React.Component {
               <Breadcrumb.Item>Bill</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                <h1>Primeira página</h1>
+               <ComponentContext />
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>Success Sistemas LTDA.</Footer>
