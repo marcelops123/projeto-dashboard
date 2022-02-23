@@ -11,6 +11,7 @@ UserOutlined,
 } from '@ant-design/icons';
 import { Main } from "./Main";
 import { useNavigate } from "react-router-dom";
+import '../Styles/ContentStyles.css'
 
 
 
@@ -48,44 +49,71 @@ class SiderDemo extends React.Component {
        
           </Menu>
         </Sider>
-        <Layout className="site-layout">
+        <Layout  className="site-layout">
          
         <HStack width='100%' border={4} height='10%' borderRadius={4} padding='0.8%' bgColor='white'>
-        <Text background='transparent'  fontSize={20}><b>Dashboard Financeiro</b></Text>
-        <HStack minW='60%' maxW='90%' justifyContent='right'>
-        <Input borderRadius={5} minW='160px' maxW='270px'  textAlign={'center'}  placeholder="Todas as contas"></Input>
+        <Text paddingLeft='1%' background='transparent' whiteSpace={'nowrap'}  fontSize={20}><b>Dashboard Financeiro</b></Text>
+        <HStack minW='60%' id="hstack--input"  maxW='90%' paddingLeft='50%'>
+        <Input borderRadius={5}  textAlign={'left'}  placeholder="Todas as contas"></Input>
         </HStack>
           
         
           </HStack>
            
-          <Content style={{ margin: '0 16px' }}>
-        
-            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                <Box  padding={5} backgroundColor='white'>
-                  <HStack>
-                    <Text textColor={'dodgerblue'} fontSize={20} paddingBottom='2%'>R$</Text>
+          <Content style={{ margin: '0 1%', backgroundColor: 'whitesmoke', display: '-ms-inline-flexbox' }}>
+            <div className="site-layout-background" style={{ padding: 20, minHeight: 360, width: '100%' }}>
+                <Box width='100%'  padding='1%' alignContent={'center'} backgroundColor='white'>
+                <HStack  width='100%'   id="hstack--global">
 
-                    <VStack><br/><br/><br/>
-                    <Text textColor={'dodgerblue'} fontSize={'40'}>2.619.904,37</Text>
-                    <Text textAlign={'center'} textColor={'dodgerblue'} >Saldo Atual</Text>
+                  <HStack paddingLeft='1%' minWidth='25%' display={'flex'} maxWidth='25%'>
+                    <VStack paddingBottom='13%'>
+                    <Text textAlign={'left'} fontSize={20} textColor={'blue'}>R$</Text>
                     </VStack>
+                  <VStack>
+                    <Text  textColor={'blue'} fontSize={34}>2.619.904,37</Text>
+                    <Text><b>SALDO ATUAL</b></Text>
+                  </VStack>
+                  </HStack>
+
                     
-                  <HStack paddingLeft={5}>
-                    <Text textColor={'dodgerblue'} fontSize={20} paddingBottom='10%'>R$</Text>
 
-                    <VStack><br/><br/><br/>
-                    <Text textColor={'dodgerblue'} fontSize={'40'}>583,34</Text>
-                    <Text textAlign={'center'} textColor={'dodgerblue'} >A receber</Text>
-
+                  <HStack paddingLeft='5%' minWidth='25%' display={'flex'}  maxWidth='25%'>
+                    <VStack paddingBottom='13%'>
+                    <Text textAlign={'left'} fontSize={20} textColor={'blue'}>R$</Text>
                     </VStack>
+                  <VStack>
+                    <Text  textColor={'blue'} fontSize={34}>583,34</Text>
+                    <Text><b>A RECEBER</b></Text>
+                  </VStack>
                   </HStack>
 
+
+
+                 <HStack paddingLeft='5%' minWidth='25%' display={'flex'}  maxWidth='25%'>
+                    <VStack paddingBottom='13%'>
+                    <Text textAlign={'left'} fontSize={20} textColor={'blue'}>R$</Text>
+                    </VStack>
+                  <VStack>
+                    <Text  textColor={'blue'} fontSize={34}>19.125,00</Text>
+                    <Text><b>A PAGAR</b></Text>
+                  </VStack>
                   </HStack>
+
+
+                   <HStack paddingLeft='10%' minWidth='25%' display={'flex'}  maxWidth='25%'>
+                    <VStack paddingBottom='13%'>
+                    <Text textAlign={'left'} fontSize={20} textColor={'blue'}>R$</Text>
+                    </VStack>
+                  <VStack>
+                    <Text whiteSpace={'nowrap'}  textColor={'blue'} fontSize={34}>2.601.362,71</Text>
+                    <Text><b>SALDO PROJETADO</b></Text>
+                  </VStack>
+                  </HStack>
+
+                </HStack>
                 </Box>
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Success Sistemas LTDA.</Footer>
         </Layout>
       </Layout>
       </ChakraProvider>
